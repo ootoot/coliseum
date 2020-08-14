@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#major-grid {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 2000px) 1fr;
+  grid-template-rows: 75vh 25vh 25vh 50px;
+  width: 100%;
+}
+
+#splash-grid {
+  grid-column: 2 / 3;
+  grid-row: 1 /2;
+  background-color: aqua;
+  display: grid;
+  grid-template-rows: 50px auto;
+}
+
+#header-grid {
+  background-color: aquamarine;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#header-left {
+  background-color: beige;
+  grid-column: 1/2;
+}
+
+#header-right {
+  background-color: blueviolet;
+  grid-column: 3/4;
+}
+
+#splash-content {
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-rows: 1fr 50px 1fr;
+}
+
+#headline {
+  background-color: cornflowerblue;
+}
+
+#download-button {
+  background-color: crimson;
+}
+
+#main-image {
+  background-color: darkgoldenrod;
+}
+
+#benefits-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: brown;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.benefit {
+  display: grid;
+  background-color: chocolate;
+  min-width: 300px;
+}
+
+#cta-grid {
+  justify-self: center;
+  align-self: center;
+  background-color: burlywood;
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+#footer-grid {
+  background-color: chartreuse;
+  grid-column: 2/3;
+  grid-row: 4/5;
+}
