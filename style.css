@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "fredokaOne";
+  src: url("FredokaOne-Regular.ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -5,21 +10,19 @@ body {
 
 #major-grid {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 2000px) 1fr;
-  grid-template-rows: 75vh 25vh 25vh 50px;
+  grid-template-columns: 1fr minmax(auto, 1400px) 1fr;
+  grid-template-rows: 100vh 25vh 25vh 50px;
   width: 100%;
 }
 
 #splash-grid {
   grid-column: 2 / 3;
   grid-row: 1 /2;
-  background-color: aqua;
   display: grid;
   grid-template-rows: 50px auto;
 }
 
 #header-grid {
-  background-color: aquamarine;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -35,22 +38,52 @@ body {
 }
 
 #splash-content {
-  justify-self: center;
   align-self: center;
-  display: grid;
-  grid-template-rows: 1fr 50px 1fr;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#splash-left {
+  max-width: 65%;
+
+  justify-items: center;
+}
+
+#title {
+  font-family: "fredokaOne", Fallback, sans-serif;
+  font-size: 9em;
+  vertical-align: baseline;
+  line-height: 0.75;
 }
 
 #headline {
-  background-color: cornflowerblue;
+  font-family: "fredokaOne", Fallback, sans-serif;
+  font-size: 2em;
+}
+
+#download {
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 #download-button {
-  background-color: crimson;
+}
+
+#intro-copy {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  max-width: 600px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+#splash-right {
 }
 
 #main-image {
-  background-color: darkgoldenrod;
 }
 
 #benefits-flex {
