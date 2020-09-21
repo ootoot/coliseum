@@ -3,15 +3,22 @@
   src: url("FredokaOne-Regular.ttf");
 }
 
+@font-face {
+  font-family: "montserrat";
+  src: url("Montserrat-Medium.ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "montserrat", sans-serif;
 }
 
 #container {
   display: flex;
   flex-direction: column;
   max-width: 1400px;
+  margin: auto;
 }
 
 #splash-grid {
@@ -24,6 +31,7 @@ body {
 #header-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  font-family: "fredokaOne", Fallback, sans-serif;
 }
 
 #header-left {
@@ -43,12 +51,15 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  align-content: space-evenly;
   min-height: 100vh;
 }
 
 #splash-left {
-  /* flex-grow: 4; */
-  justify-items: center;
+  /* justify-items: center; */
+  /* padding: 10px; */
+  box-sizing: border-box;
+  text-align: center;
 }
 
 #title {
@@ -60,29 +71,26 @@ body {
 
 #headline {
   font-family: "fredokaOne", Fallback, sans-serif;
-  font-size: 2em;
+  font-size: 1.75em;
 }
 
 #download {
-  /* padding-top: 5%;
-  padding-bottom: 5%; */
 }
 
 #download-button {
 }
 
 #intro-copy {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
-  max-width: 600px;
-  /* padding-top: 5%;
-  padding-bottom: 5%; */
+  max-width: 500px;
 }
 
 #splash-right {
+  /* margin: 10px; */
 }
 
-#main-image {
+#main-image > img {
+  width: 100%;
 }
 
 #benefits-flex {
