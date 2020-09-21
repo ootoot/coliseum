@@ -8,11 +8,10 @@ body {
   padding: 0;
 }
 
-#major-grid {
-  display: grid;
-  grid-template-columns: 1fr minmax(auto, 1400px) 1fr;
-  grid-template-rows: 100vh 25vh 25vh 50px;
-  width: 100%;
+#container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
 }
 
 #splash-grid {
@@ -44,11 +43,11 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
+  min-height: 100vh;
 }
 
 #splash-left {
-  max-width: 65%;
-
+  /* flex-grow: 4; */
   justify-items: center;
 }
 
@@ -65,8 +64,8 @@ body {
 }
 
 #download {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  /* padding-top: 5%;
+  padding-bottom: 5%; */
 }
 
 #download-button {
@@ -76,8 +75,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   max-width: 600px;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  /* padding-top: 5%;
+  padding-bottom: 5%; */
 }
 
 #splash-right {
@@ -92,8 +91,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   background-color: brown;
-  grid-column: 2/3;
-  grid-row: 2/3;
+  height: 300px;
 }
 
 .benefit {
