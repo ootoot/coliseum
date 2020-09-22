@@ -1,11 +1,16 @@
 @font-face {
   font-family: "fredokaOne";
-  src: url("FredokaOne-Regular.ttf");
+  src: url("FredokaOne-Regular.otf");
 }
 
 @font-face {
   font-family: "montserrat";
   src: url("Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: "dingbats";
+  src: url("Fredoka dingbats.otf");
 }
 
 body {
@@ -40,8 +45,28 @@ body {
 }
 
 #header-right {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
+  font-size: 1.5em;
+  text-align: right;
   grid-column: 3/4;
+  padding: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #ff8e6c;
+}
+
+a:hover {
+  color: #ff5765;
+}
+
+a:active {
+  color: #ff8e6c;
+}
+
+a:visited {
+  color: #ff8e6c;
 }
 
 #splash-content {
@@ -75,14 +100,41 @@ body {
 }
 
 #download {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-#download-button {
+.download-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  font-size: large;
+  padding: 5px;
+  background-size: auto 200%;
+  background-image: linear-gradient(to top, #ff9f56 0%, #ffdc6c 100%);
+}
+
+.download-button:hover {
+  transition: 0.5s;
+  background-position: 100% 500%; /* change the direction of the change here */
+}
+
+.download-button:active {
+  transition: 0.5s;
+  background-size: auto 200%;
+
+  background-image: linear-gradient(to top, #ff8056 0%, #ff9f61 100%);
+}
+
+.download-button:focus {
 }
 
 #intro-copy {
   font-size: 1em;
   max-width: 500px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #splash-right {
@@ -96,16 +148,51 @@ body {
 #benefits-flex {
   display: flex;
   justify-content: space-around;
+  /* justify-items: center; */
   align-items: center;
   flex-wrap: wrap;
-  background-color: brown;
-  height: 300px;
+  width: 80%;
+  align-self: center;
 }
 
 .benefit {
   display: grid;
-  background-color: chocolate;
-  min-width: 300px;
+  grid-template-rows: 0px 75px 50px 75px;
+  width: 300px;
+  justify-items: center;
+  border-radius: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.benefit::before {
+  content: "";
+  position: relative;
+  /* top: -10px; */
+  width: 300px;
+  height: 200px;
+  border-radius: 50px;
+
+  z-index: -1;
+  background-image: linear-gradient(to top, #ff8056 0%, #ff9f61 100%);
+  transform: rotate(3deg);
+}
+
+.benefit-icon {
+  font-family: "dingbats";
+  vertical-align: bottom;
+  font-size: 4em;
+}
+
+.benefit-title {
+  vertical-align: bottom;
+  font-family: "fredokaOne", Fallback, sans-serif;
+}
+
+.benefit-summary {
+  margin: 5px;
+  text-align: center;
 }
 
 #cta-grid {
