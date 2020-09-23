@@ -24,6 +24,7 @@ body {
   flex-direction: column;
   max-width: 1400px;
   margin: auto;
+  height: 100vh;
 }
 
 #splash-grid {
@@ -31,6 +32,7 @@ body {
   grid-row: 1 /2;
   display: grid;
   grid-template-rows: 50px auto;
+  height: 100%;
 }
 
 #header-grid {
@@ -77,12 +79,11 @@ a:visited {
   align-items: center;
   justify-content: space-around;
   align-content: space-evenly;
-  min-height: 100vh;
 }
 
 #splash-left {
   /* justify-items: center; */
-  /* padding: 10px; */
+  padding: 10px;
   box-sizing: border-box;
   text-align: center;
 }
@@ -111,6 +112,8 @@ a:visited {
   border-radius: 7px;
   font-size: large;
   padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
   background-size: auto 200%;
   background-image: linear-gradient(to top, #ff9f56 0%, #ffdc6c 100%);
 }
