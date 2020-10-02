@@ -82,7 +82,9 @@ a:visited {
 }
 
 #splash-left {
-  /* justify-items: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
@@ -136,8 +138,47 @@ a:visited {
 #intro-copy {
   font-size: 1em;
   max-width: 500px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 15px;
+}
+
+#mailchimp-form {
+  max-width: 370px;
+  margin: 0 auto;
+}
+
+#form-parts {
+  display: flex;
+  flex-flow: row nowrap;
+  text-align: center;
+  font-size: 19px;
+}
+
+#email-input {
+  display: inline-block;
+  padding: 10px;
+  height: 40px;
+  border: 1px solid #ff9900;
+  border-right-width: 0;
+  border-radius: 5px 0 0 5px;
+  font-family: "montserrat", sans-serif;
+
+  font-size: 14px;
+  line-height: 19px;
+  -webkit-appearance: none;
+}
+
+#subscrube-button {
+  margin-top: 0;
+  padding: 10px 22px;
+  min-width: 132px;
+  height: 40px;
+  background: #ff9900;
+  border: 1px solid #ff9900;
+  border-radius: 0 5px 5px 0;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "fredokaOne", Fallback, sans-serif;
 }
 
 #splash-right {
